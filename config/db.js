@@ -1,0 +1,9 @@
+const mongoose = require('mongoose')
+
+//Function to Connect MonogDB
+const connectDB = (url) => {
+    return mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => console.log('MongoDB Connected'))
+        .catch(err => console.log(err));
+}
+
+module.exports = connectDB
